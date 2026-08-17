@@ -19,7 +19,7 @@ export default function AboutUs() {
                 By syncing product details directly to your Google Sheets, we ensure you always own your data, with a secure, instant spreadsheet backup that you can take offline anytime.
               </p>
               
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-orange-100">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-orange-100">
                 <div>
                   <p className="text-2xl md:text-4xl font-black text-[#ff7640]">15K+</p>
                   <p className="text-[10px] md:text-xs text-slate-450 font-bold uppercase tracking-wider mt-1">Active Stores</p>

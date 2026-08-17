@@ -111,7 +111,7 @@ export default function OnboardingWizard() {
                 value={shopName}
                 onChange={(e) => setShopName(e.target.value)}
                 placeholder="My Store LLC" 
-                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
               />
             </div>
             
@@ -120,7 +120,7 @@ export default function OnboardingWizard() {
               <select 
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-emerald-600 transition-colors"
+                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 focus:outline-none focus:border-emerald-600 transition-colors"
               >
                 <option value="Retail">Retail Store</option>
                 <option value="Grocery">Grocery / Supermarket</option>
@@ -139,7 +139,7 @@ export default function OnboardingWizard() {
               value={contact}
               onChange={(e) => setContact(e.target.value)}
               placeholder="+1 (555) 019-2834" 
-              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
             />
           </div>
 
@@ -150,7 +150,7 @@ export default function OnboardingWizard() {
               onChange={(e) => setAddress(e.target.value)}
               placeholder="123 Shopping Mall Lane, Suite A" 
               rows="2"
-              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors resize-none"
+              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors resize-none"
             />
           </div>
 
@@ -161,7 +161,7 @@ export default function OnboardingWizard() {
               value={logoUrl}
               onChange={(e) => setLogoUrl(e.target.value)}
               placeholder="https://mywebsite.com/logo.png" 
-              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
             />
           </div>
 
@@ -179,7 +179,7 @@ export default function OnboardingWizard() {
                 value={sheetId}
                 onChange={(e) => setSheetId(e.target.value)}
                 placeholder="https://docs.google.com/spreadsheets/d/.../edit" 
-                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
               />
             </div>
             {googleRefreshToken ? (
@@ -196,7 +196,7 @@ export default function OnboardingWizard() {
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/10 cursor-pointer disabled:opacity-50 mt-4"
+            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 min-h-[44px] rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/10 cursor-pointer disabled:opacity-50 mt-4"
           >
             {loading ? 'Initializing Store...' : 'Complete Configuration & Launch'}
           </button>

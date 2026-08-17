@@ -615,17 +615,17 @@ const syncToGoogleSheets = async (productData) => {
 
       <div className="flex-1 max-w-7xl w-full mx-auto p-6 flex flex-col md:flex-row gap-6">
         {/* Navigation Sidebar */}
-        <aside className="w-full md:w-60 space-y-1.5 shrink-0">
+        <aside className="w-full md:w-60 flex flex-row md:flex-col gap-2 md:gap-1.5 shrink-0 overflow-x-auto md:overflow-visible pb-2 md:pb-0 snap-x snap-mandatory hide-scrollbar">
           <button 
             onClick={() => setActiveTab('products')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'products' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'products' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             📦 Products Catalog
           </button>
           
           <button
             onClick={() => setActiveTab('analytics')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer flex items-center justify-between ${activeTab === 'analytics' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap flex items-center justify-between space-x-2 ${activeTab === 'analytics' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             <span>📊 Scans Analytics</span>
             {!canSeeAnalytics && <span className="text-[9px] bg-amber-100 text-amber-700 font-bold px-1.5 py-0.5 rounded-md">BASIC+</span>}
@@ -633,7 +633,7 @@ const syncToGoogleSheets = async (productData) => {
 
           <button 
             onClick={() => setActiveTab('billing')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'billing' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'billing' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             💳 Plan Subscription
           </button>
@@ -641,7 +641,7 @@ const syncToGoogleSheets = async (productData) => {
 
           <button
             onClick={() => setActiveTab('sheets')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer flex items-center justify-between ${activeTab === 'sheets' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap flex items-center justify-between space-x-2 ${activeTab === 'sheets' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             <span>📊 Google Sheets Sync</span>
             {!canUseSheets && <span className="text-[9px] bg-amber-100 text-amber-700 font-bold px-1.5 py-0.5 rounded-md">BASIC+</span>}
@@ -649,14 +649,14 @@ const syncToGoogleSheets = async (productData) => {
 
           <button
             onClick={() => setActiveTab('scanner')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer flex items-center justify-between ${activeTab === 'scanner' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap flex items-center justify-between space-x-2 ${activeTab === 'scanner' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             <span>📸 Barcode Scanner</span>
           </button>
 
           <button 
             onClick={() => setActiveTab('settings')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'settings' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'settings' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             ⚙️ Shop Settings
           </button>
@@ -903,7 +903,8 @@ const syncToGoogleSheets = async (productData) => {
               )}
 
               {/* FEATURE COMPARISON TABLE */}
-              <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
+              <div className="bg-white border border-slate-200 rounded-3xl overflow-x-auto shadow-sm">
+                <div className="min-w-[700px]">
                 {/* Plan Header Row */}
                 <div className="grid grid-cols-5 border-b border-slate-100">
                   <div className="p-5 bg-slate-50 border-r border-slate-100">
@@ -1090,6 +1091,7 @@ const syncToGoogleSheets = async (productData) => {
                     })}
                   </div>
                 ))}
+                </div>
               </div>
 
               {/* CURRENT USAGE BAR + PAYMENT FORM */}

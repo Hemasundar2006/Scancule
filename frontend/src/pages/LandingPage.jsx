@@ -139,7 +139,7 @@ export default function LandingPage() {
             {/* HERO STATE 1: CORE BRAND PITCH */}
             {heroState === 1 ? (
               <div className="space-y-8 animate-fade-in">
-                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 px-4">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 px-4">
                   The ultimate barcode <br /> & inventory platform.
                 </h1>
                 
@@ -162,7 +162,7 @@ export default function LandingPage() {
               
               /* HERO STATE 2: INTERACTIVE AI MOCK CONSOLE BUILDER */
               <div className="w-full space-y-6 animate-fade-in">
-                <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-850 px-4 transition-all">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-850 px-4 transition-all">
                   What's on your catalog today?
                 </h1>
 
@@ -176,7 +176,7 @@ export default function LandingPage() {
                     className="w-full bg-transparent border-0 text-slate-800 placeholder-slate-450 text-xs focus:ring-0 focus:outline-none resize-none leading-relaxed"
                   />
                   
-                  <div className="flex justify-between items-center border-t border-orange-50 pt-2.5">
+                  <div className="flex flex-col sm:flex-row justify-between sm:items-center border-t border-orange-50 pt-2.5 gap-3 sm:gap-0">
                     <div className="flex items-center space-x-2">
                       <button className="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg transition-colors cursor-pointer" title="Attach specs file">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -279,7 +279,7 @@ export default function LandingPage() {
                 )}
 
                 {/* Back controls */}
-                <div className="flex justify-center space-x-6 pt-2">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-4">
                   <button 
                     onClick={() => { setPromptInput(''); setGeneratedPreview(null); }}
                     className="text-[10px] text-slate-400 hover:text-slate-600 font-bold uppercase tracking-wider cursor-pointer"

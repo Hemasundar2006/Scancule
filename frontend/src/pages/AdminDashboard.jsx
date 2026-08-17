@@ -217,24 +217,24 @@ export default function AdminDashboard() {
       {/* Main Workspace Layout */}
       <div className="flex-1 max-w-7xl w-full mx-auto p-6 flex flex-col md:flex-row gap-6">
         {/* Sidebar Nav */}
-        <aside className="w-full md:w-64 space-y-1.5 shrink-0">
+        <aside className="w-full md:w-64 flex flex-row md:flex-col gap-2 md:gap-1.5 shrink-0 overflow-x-auto md:overflow-visible pb-2 md:pb-0 snap-x snap-mandatory hide-scrollbar">
           <button 
             onClick={() => setActiveTab('billing-queue')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'billing-queue' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 min-h-[44px] rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'billing-queue' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             💳 Billing Approval Queue
           </button>
           
           <button 
             onClick={() => setActiveTab('all-shops')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'all-shops' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 min-h-[44px] rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'all-shops' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             🏪 Shop Accounts Registry
           </button>
 
           <button 
             onClick={() => setActiveTab('system-settings')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${activeTab === 'system-settings' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
+            className={`shrink-0 md:w-full text-left px-4 py-3 min-h-[44px] rounded-xl text-sm font-semibold transition-all cursor-pointer snap-start whitespace-nowrap ${activeTab === 'system-settings' ? 'bg-white text-orange-700 shadow-sm border border-slate-200/60' : 'hover:bg-slate-100/50 text-slate-500'}`}
           >
             ⚙️ System Settings
           </button>

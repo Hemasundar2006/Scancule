@@ -91,7 +91,7 @@ export default function ContactUs() {
                     value={contactName}
                     onChange={(e) => setContactName(e.target.value)}
                     placeholder="John Doe" 
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all"
                   />
                 </div>
 
@@ -103,7 +103,7 @@ export default function ContactUs() {
                     value={contactEmail}
                     onChange={(e) => setContactEmail(e.target.value)}
                     placeholder="name@company.com" 
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all"
                   />
                 </div>
 
@@ -115,13 +115,13 @@ export default function ContactUs() {
                     onChange={(e) => setContactMessage(e.target.value)}
                     placeholder="How can we help your business?" 
                     rows="5"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all resize-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff7640]/20 focus:border-[#ff7640] transition-all resize-none"
                   />
                 </div>
 
                 <button 
                   type="submit" 
-                  className="w-full bg-[#ff7640] hover:bg-[#e65c26] text-white font-bold py-4 px-4 rounded-xl text-sm transition-all shadow-md shadow-orange-500/20 cursor-pointer mt-2"
+                  className="w-full bg-[#ff7640] hover:bg-[#e65c26] text-white font-bold py-4 px-4 min-h-[44px] rounded-xl text-sm transition-all shadow-md shadow-orange-500/20 cursor-pointer mt-2"
                 >
                   Send Message
                 </button>

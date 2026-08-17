@@ -216,7 +216,7 @@ export default function BarcodeScanner({ shop, products, canUseSheets }) {
                 <select
                   value={selectedCamera}
                   onChange={(e) => { stopScanning(); setSelectedCamera(e.target.value) }}
-                  className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-orange-500"
+                  className="w-full bg-white border border-slate-200 rounded-xl px-3 py-3 min-h-[44px] text-xs text-slate-800 focus:outline-none focus:border-orange-500"
                 >
                   {cameras.length === 0 && <option>No cameras available</option>}
                   {cameras.map(c => (
@@ -231,14 +231,14 @@ export default function BarcodeScanner({ shop, products, canUseSheets }) {
                 <select
                   value={scanAction}
                   onChange={(e) => setScanAction(e.target.value)}
-                  className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-orange-500"
+                  className="w-full bg-white border border-slate-200 rounded-xl px-3 py-3 min-h-[44px] text-xs text-slate-800 focus:outline-none focus:border-orange-500"
                 >
                   {ACTIONS.map(a => <option key={a}>{a}</option>)}
                 </select>
               </div>
               <button
                 onClick={scanning ? stopScanning : startScanning}
-                className={`shrink-0 font-bold text-xs px-6 py-2.5 rounded-xl transition-all cursor-pointer shadow-md ${
+                className={`w-full sm:w-auto shrink-0 font-bold text-xs px-6 py-3 min-h-[44px] rounded-xl transition-all cursor-pointer shadow-md ${
                   scanning ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-orange-600 hover:bg-orange-700 text-white'
                 }`}
               >

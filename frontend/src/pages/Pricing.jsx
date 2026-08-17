@@ -125,10 +125,10 @@ export default function Pricing() {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full text-left text-xs border-collapse min-w-[600px]">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50/60">
-                    <th className="py-3.5 px-4 font-bold text-slate-900 rounded-l-xl">Feature</th>
+                    <th className="py-3.5 px-4 font-bold text-slate-900 rounded-l-xl sticky left-0 bg-slate-50 z-20 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">Feature</th>
                     <th className="py-3.5 px-4 font-bold text-slate-700 text-center">Free Trial</th>
                     <th className="py-3.5 px-4 font-bold text-orange-600 text-center bg-orange-50/40">Basic</th>
                     <th className="py-3.5 px-4 font-bold text-slate-900 text-center">Pro</th>
@@ -137,8 +137,8 @@ export default function Pricing() {
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {comparisonRows.map((row, rIdx) => (
-                    <tr key={rIdx} className="hover:bg-slate-50/40 transition-colors">
-                      <td className="py-3 px-4 font-semibold text-slate-800">{row.feature}</td>
+                    <tr key={rIdx} className="hover:bg-slate-50/40 transition-colors group">
+                      <td className="py-3 px-4 font-semibold text-slate-800 sticky left-0 bg-white group-hover:bg-slate-50/90 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">{row.feature}</td>
                       <td className="py-3 px-4 text-center text-slate-500">{row.free}</td>
                       <td className="py-3 px-4 text-center font-bold text-orange-600 bg-orange-50/30">{row.basic}</td>
                       <td className="py-3 px-4 text-center font-semibold text-slate-800">{row.pro}</td>

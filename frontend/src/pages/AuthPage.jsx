@@ -94,7 +94,7 @@ export default function AuthPage() {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 placeholder="John Doe" 
-                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
               />
             </div>
           )}
@@ -107,7 +107,7 @@ export default function AuthPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@company.com" 
-              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
             />
           </div>
 
@@ -119,14 +119,14 @@ export default function AuthPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••" 
-              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
+              className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 min-h-[44px] text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 transition-colors"
             />
           </div>
 
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all shadow-md shadow-emerald-600/10 cursor-pointer disabled:opacity-50"
+            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 min-h-[44px] rounded-xl text-sm transition-all shadow-md shadow-emerald-600/10 cursor-pointer disabled:opacity-50"
           >
             {loading ? 'Processing...' : isLogin ? 'Sign In' : 'Create Account'}
           </button>

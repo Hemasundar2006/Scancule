@@ -54,17 +54,38 @@ export default function BarcodeScanner({ shop, products, canUseSheets }) {
   }, [])
 
   const startScanning = useCallback(async () => {
-    if (!selectedCamera) {
-      setStatus('No camera found. Please allow camera access.')
-      setStatusType('error')
-      return
-    }
-    setStatus('Starting camera...')
+    setStatus('Requesting camera permission...')
     setStatusType('info')
     try {
+      // 1. Force a permission request (Crucial for iOS/Mobile browsers)
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      
+      // 2. Now list devices since permission is granted
+      const devices = await BrowserMultiFormatReader.listVideoInputDevices()
+      setCameras(devices)
+      
+      let targetDeviceId = selectedCamera
+      if (!targetDeviceId) {
+        const rear = devices.find(d =>
+          d.label.toLowerCase().includes('back') || d.label.toLowerCase().includes('rear') || d.label.toLowerCase().includes('environment')
+        )
+        targetDeviceId = rear ? rear.deviceId : (devices[0]?.deviceId || '')
+        setSelectedCamera(targetDeviceId)
+      }
+
+      // Stop the temp stream before starting the scanner to free up the hardware
+      stream.getTracks().forEach(track => track.stop())
+
+      if (!targetDeviceId) {
+        setStatus('No camera found on this device.')
+        setStatusType('error')
+        return
+      }
+
+      setStatus('Starting camera...')
       readerRef.current = new BrowserMultiFormatReader()
       controlsRef.current = await readerRef.current.decodeFromVideoDevice(
-        selectedCamera,
+        targetDeviceId,
         videoRef.current,
         async (result, err) => {
           if (result) {

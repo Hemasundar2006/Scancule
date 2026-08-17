@@ -147,7 +147,7 @@ export default function BarcodeScanner({ shop, products, canUseSheets }) {
       const dt = entry.timestamp.toISOString().replace('T', ' ').slice(0, 19)
       const row = [dt, entry.code, name, `Rs. ${price}`, entry.action, 'camera-scanner']
 
-      const res = await fetch(`http://${window.location.hostname}:8000/sync-scan`, {
+      const res = await fetch(`https://scancule.onrender.com/sync-scan`, {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer super-secret-default-token',

@@ -126,7 +126,7 @@ export default function ShopDashboard() {
         throw new Error('No products in your catalog to sync. Create a product first.');
       }
 
-      const res = await fetch(`http://${window.location.hostname}:8000/sync-all`, {
+      const res = await fetch(`https://scancule.onrender.com/sync-all`, {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer super-secret-default-token',

@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+credentials.json
+scancule-bbd508c609f3.json
+.DS_Store
+dist/
+build/
+.npm/
+.eslintcache

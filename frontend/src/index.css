@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .animate-marquee-vertical {
+    animation: marquee-vertical 25s linear infinite;
+  }
+  .animate-marquee-vertical:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

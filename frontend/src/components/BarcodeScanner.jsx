@@ -184,11 +184,12 @@ export default function BarcodeScanner({ shop, products, canUseSheets }) {
         const err = await res.json()
         throw new Error(err.detail || 'Failed to append row')
       }
-      setSheetStatus('Row Appended')
-      setTimeout(() => setSheetStatus(null), 3000)
+      setStatus(`✅ Synced to Sheets: ${name}`)
+      setStatusType('success')
     } catch (err) {
       console.error('Sheet push error:', err)
-      setSheetStatus('Sync Failed')
+      setStatus(`⚠️ Sheet Sync Failed: ${err.message}`)
+      setStatusType('error')
     } finally {
       setSheetPushing(false)
     }
